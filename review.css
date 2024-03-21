@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: #369fff;
+}
+
+i {
+  font-size: 24px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+  height: 100vh;
+}
+
+.container .left-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.container .left-section .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.container .left-section .logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.container .left-section .logo a {
+  font-weight: 600;
+  font-size: 20px;
+  color: #006ed3;
+}
+
+.menu-btn {
+  background-color: #d1e6f9;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: none;
+}
+
+.menu-btn i {
+  font-size: 18px;
+  color: #208bee;
+}
+
+.container .left-section .sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container .left-section .sidebar .item {
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.container .left-section .sidebar .item i {
+  color: #bdbdbd;
+  transition: all 0.3s ease;
+}
+
+.container .left-section .sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 14px;
+  color: #bdbdbd;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.container .left-section .sidebar .item#active a,
+.container .left-section .sidebar .item#active i,
+.container .left-section .upgrade i {
+  color: #369fff;
+}
+
+.container .left-section .sidebar .item a::after {
+  position: absolute;
+  content: "";
+  width: 0px;
+  height: 0px;
+  background-color: #369fff;
+  left: 80px;
+  border-radius: 50%;
+  top: -2px;
+  transform: translateY(116%);
+  transition: all 0.3s ease;
+}
+
+.container .left-section .sidebar .item#active a::after {
+  width: 8px;
+  height: 8px;
+}
